@@ -1,0 +1,81 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Hero --- */
+.hero {
+  padding: 4rem 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+}
+/* .texto-hero{
+  background: gainsboro;
+} */
+.banner img{
+  width: 60%;
+}
+
+
+/* --- Seccion tarjetas  --- */
+.tarjetas{
+  width: 80%;
+  margin: 0 auto;
+}
+.tarjetas .fila {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.tarjeta {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  text-align: center;
+  padding: 1rem;
+  width: 30%;
+}
+.tarjeta img {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 10px;
+}
+.col-4 { flex: 0 0 30%; }
+.col-3 { flex: 0 0 22%; }
+
+/* --- seccion Ventajas --- */
+
+.sec-ventajas{
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ventajas{
+  padding: 10px;
+}
+.img-ventajas{
+  width: auto;
+  padding: 10px;
+  /* width: 100%; */
+  justify-content: center;
+}
+
+/* --- Responsivo --- */
+@media (min-width: 1200px) { .col-6 {width: 50%;}}
+   
+@media (max-width: 900px) {
+  .tarjeta { width: 45%; }
+  .col-6 {width: 50%;}
+}
+@media (max-width: 600px) {
+  .tarjeta { width: 90%; }
+  .col-6 {width: 100%;}
+} 
+

@@ -1,0 +1,84 @@
+.sn-servicios {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.intro h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.intro p {
+  font-size: 1.1em;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.btn-acceso {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.btn-vermas {
+  background-color: #eee;
+  color: #333;
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.planes {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.plan {
+  flex: 1 1 45%;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.plan img {
+  width: 100%;
+  margin-top: 15px;
+  border-radius: 8px;
+}
+
+.subtitulo {
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.info-extra {
+  display: none;
+  margin-top: 15px;
+  background-color: #fff;
+  padding: 10px;
+  border-left: 3px solid #000;
+}
+
+/* Responsive para móviles */
+@media screen and (max-width: 768px) {
+  .planes {
+    flex-direction: column;
+  }
+
+  .plan {
+    flex: 1 1 100%;
+    margin-bottom: 20px;
+  }
+}
