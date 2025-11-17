@@ -26,11 +26,11 @@ export default function Header() {
           <ul>
             <li><Link to="/home">Inicio</Link></li>
             <li><Link to="/about">Sobre nosotros</Link></li>
-            <li><Link to="/Servicios">Servicios</Link></li>
+            <li><Link to="/servicios">Servicios</Link></li>
             <li><Link to="/">Contacto</Link></li>
             <li>
-              <Link to="/acceso">
-                <button style={{ color: 'white' }}>Acceso</button>
+              <Link to="/registro">
+                <button style={{ color: 'white' }}>Registro</button>
               </Link>
             </li>
           </ul>
