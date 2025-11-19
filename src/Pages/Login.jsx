@@ -32,7 +32,7 @@ export function Login() {
       if (response.usuario.rol_id === 2) {
         navigate("/jefes/homejefes");
       } else if (response.usuario.rol_id === 3) {
-        navigate("/auditores/homeauditores");
+        navigate("/auditores");
       } else {
         navigate("/");
       }

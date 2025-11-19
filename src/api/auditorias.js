@@ -1,23 +1,24 @@
-const API_URL = import.meta.env.VITE_API_URL;
-export async function get_auditorias_by_auditor(auditor_id, token) {
-    const url = `${API_URL}/auditorias/auditor/${auditor_id}/detalle`;
-    const response = await fetch(url, {
-        method: 'GET',
-        headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json',
-            'Authorization': `Bearer ${token}`
-        }
-    });
-    let data = null;
+import client from "./client";
+export async function get_auditorias_by_auditor(auditor_id) {
     try {
-        data = await response.json();
+        const response = await client.get(`/auditorias/auditor/${auditor_id}/detalle`);
+        return response.data;
     } catch (error) {
-        console.error('Error parsing JSON:', error);
+        console.error("Error fetching auditorías:", error);
+        throw error;
     }
-    if (!response.ok) {
-        const errorMessage = data && data.message ? data.message : 'Failed to fetch auditorias';
-        throw new Error(errorMessage);
+}
+
+export async function create_auditoria({auditor_id, jefe_id, concesionario_id}) {
+    try {
+        const response = await client.post('/auditorias', {
+            auditor_id,
+            jefe_id,
+            concesionario_id
+        });
+        return response.data;
+    } catch (error) {
+        console.error("Error creating auditoría:", error);
+        throw error;
     }
-    return data;
 }

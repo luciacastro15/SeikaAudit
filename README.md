@@ -19,3 +19,5 @@ If you are developing a production application, we recommend using TypeScript wi
 <!-- Iniciar servicio -->
 cd C:\Users\castr\Desktop\react\tfg
 npm run dev
+
+npm install axios

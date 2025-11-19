@@ -1,0 +1,119 @@
+/* ======= Estilos base ======= */
+.home-auditor {
+  padding: 2rem;
+  background-color: #f9f9f9;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+  text-align: center;
+}
+
+.loading,
+.error,
+.empty {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
+
+.error {
+  color: red;
+}
+
+/* ======= Grid de tarjetas ======= */
+.auditorias-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.auditoria-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  transition: transform 0.2s ease;
+}
+
+.auditoria-card:hover {
+  transform: scale(1.02);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.5rem;
+}
+
+.card-header h2 {
+  font-size: 1.2rem;
+  color: #0077cc;
+}
+
+.card-body p {
+  margin: 0.3rem 0;
+  color: #555;
+}
+
+.respuestas {
+  margin-top: 1rem;
+  background-color: #f1f1f1;
+  padding: 0.8rem;
+  border-radius: 6px;
+}
+
+.respuesta {
+  margin-bottom: 0.8rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #ddd;
+}
+
+/* ======= Media Queries ======= */
+
+/* Teléfonos pequeños */
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .auditoria-card {
+    padding: 1rem;
+  }
+
+  .card-header h2 {
+    font-size: 1rem;
+  }
+
+  .card-body p {
+    font-size: 0.9rem;
+  }
+
+  .respuestas h4 {
+    font-size: 1rem;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .auditorias-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+}
+
+/* Pantallas grandes */
+@media (min-width: 1200px) {
+  .auditorias-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
