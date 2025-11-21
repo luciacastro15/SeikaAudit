@@ -12,8 +12,8 @@ import { Login } from './Pages/Login.jsx'
 import { HomeJefes } from './Pages/Jefes/HomeJefes.jsx'
 import { HomeAuditores } from './Pages/Auditores/HomeAudit.jsx'
 import { AuditoresLayout } from './Pages/Auditores/AuditoresLayout.jsx'
-import { FormularioAuditoria } from './Pages/Auditores/FormularioAuditoria.jsx'
 import { ListaConcesionarios } from './Pages/Auditores/Concesionarios.jsx'
+import CrearAuditoria from './Pages/Auditores/CrearAuditoria.jsx'
 // import Servicios from './Pages/Servicios.jsx'
 
 function App() {
@@ -33,7 +33,7 @@ function App() {
         <Route path="/auditores" element={<AuditoresLayout />}>
           <Route index element={<HomeAuditores />} />
           <Route path="perfilauditor" element={<HomeAuditores />} />
-          <Route path="formulario" element={<FormularioAuditoria />} />
+          <Route path="crear-auditoria" element={<CrearAuditoria />} />
           <Route path="concesionario" element={<ListaConcesionarios />} />
         </Route>
       </Routes>

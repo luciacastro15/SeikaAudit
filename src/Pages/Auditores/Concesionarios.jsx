@@ -30,9 +30,9 @@ export function ListaConcesionarios() {
     fetchConcesionarios();
   }, [navigate]);
 
-  const handleCrearAuditoria = (concesionarioId, jefeId) => {
-    navigate('/crear-auditoria', {
-      state: { concesionarioId, jefeId }
+  const handleCrearAuditoria = (concesionario_id, jefe_id) => {
+    navigate('/auditores/crear-auditoria', {
+      state: { concesionario_id, jefe_id }
     });
   };
 
