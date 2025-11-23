@@ -1,81 +1,410 @@
-body {
-  font-family: Arial, sans-serif;
+/* * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* --- Hero --- */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
 .hero {
-  padding: 4rem 2rem;
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.banner img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.texto-hero {
+  position: relative;
+  z-index: 2;
   text-align: center;
+  max-width: 800px;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-
-}
-/* .texto-hero{
-  background: gainsboro;
-} */
-.banner img{
-  width: 60%;
+  justify-content: center;
+  height: 100%;
 }
 
+.texto-hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
 
-/* --- Seccion tarjetas  --- */
-.tarjetas{
+.texto-hero p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.texto-hero button {
+  background-color: black;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.texto-hero button:hover {
+  background-color: #333;
+}
+
+.tarjetas {
   width: 80%;
-  margin: 0 auto;
+  margin: 4rem auto;
+  text-align: center;
 }
+
+.tarjetas h2 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
 .tarjetas .fila {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 2rem;
 }
+
 .tarjeta {
-  background: #fff;
-  border: 1px solid #eee;
-  border-radius: 10px;
   text-align: center;
   padding: 1rem;
   width: 30%;
 }
+
 .tarjeta img {
   width: 100%;
-  max-width: 100%;
   border-radius: 10px;
+  margin-bottom: 1rem;
 }
+
+.tarjeta h3 {
+  margin-bottom: 0.5rem;
+}
+
 .col-4 { flex: 0 0 30%; }
 .col-3 { flex: 0 0 22%; }
 
-/* --- seccion Ventajas --- */
-
-.sec-ventajas{
-  width: 80%;
-  margin: 0 auto;
+.ventajas-digitales {
   display: flex;
   flex-wrap: wrap;
+  gap: 3rem;
+  width: 80%;
+  margin: 4rem auto;
+  align-items: flex-start;
+  padding: 4rem 0;
 }
 
-.ventajas{
-  padding: 10px;
+.contenedor-ventajas {
+  flex: 1 1 50%;
 }
-.img-ventajas{
-  width: auto;
-  padding: 10px;
-  /* width: 100%; */
+
+.contenedor-ventajas h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #222;
+}
+
+.bloques-ventaja {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.ventaja h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.ventaja p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.botones-ventaja {
+  margin-top: 2rem;
+}
+
+.botones-ventaja button {
+  margin-right: 1rem;
+  padding: 0.8rem 1.5rem;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.botones-ventaja button:hover {
+  background-color: #333;
+}
+
+.imagen-ventaja {
+  flex: 1 1 40%;
+  display: flex;
   justify-content: center;
+  align-items: center;
 }
 
-/* --- Responsivo --- */
-@media (min-width: 1200px) { .col-6 {width: 50%;}}
-   
+.imagen-ventaja img {
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+ */
+/* --- Reset y base --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* --- Hero --- */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.banner img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.texto-hero {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.texto-hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.texto-hero p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.texto-hero button {
+  background-color: black;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.texto-hero button:hover {
+  background-color: #333;
+}
+
+/* --- Tarjetas --- */
+.tarjetas {
+  width: 80%;
+  margin: 4rem auto;
+  text-align: center;
+}
+
+.tarjetas h2 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.tarjetas .fila {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  gap: 2rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.tarjeta {
+  flex: 0 0 30%;
+  scroll-snap-align: start;
+  padding: 2rem;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+.tarjeta img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.tarjeta h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+  color: #222;
+}
+
+.tarjeta p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* --- Ventajas integradas --- */
+.ventajas-digitales {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  width: 80%;
+  margin: 4rem auto;
+  align-items: flex-start;
+  padding: 4rem 0;
+}
+
+.contenedor-ventajas {
+  flex: 1 1 50%;
+}
+
+.contenedor-ventajas h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #222;
+}
+
+.bloques-ventaja {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.ventaja h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.ventaja p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.botones-ventaja {
+  margin-top: 2rem;
+}
+
+.botones-ventaja button {
+  margin-right: 1rem;
+  padding: 0.8rem 1.5rem;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.botones-ventaja button:hover {
+  background-color: #333;
+}
+
+.imagen-ventaja {
+  flex: 1 1 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagen-ventaja img {
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+
+
+/* --- Responsive --- */
+@media (min-width: 1200px) {
+  .col-6 { width: 50%; }
+}
+
 @media (max-width: 900px) {
-  .tarjeta { width: 45%; }
-  .col-6 {width: 50%;}
+  .tarjeta { flex: 0 0 45%; }
+  .col-6 { width: 100%; }
+  .ventajas-digitales { flex-direction: column; text-align: center; }
+  .contenedor-ventajas, .imagen-ventaja { flex: 1 1 100%; }
+  .botones-ventaja button { margin-bottom: 1rem; }
 }
-@media (max-width: 600px) {
-  .tarjeta { width: 90%; }
-  .col-6 {width: 100%;}
-} 
 
+@media (max-width: 600px) {
+  .tarjeta { flex: 0 0 90%; }
+  .texto-hero h1 { font-size: 2rem; }
+  .texto-hero p { font-size: 1rem; }
+}

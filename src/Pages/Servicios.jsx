@@ -1,11 +1,9 @@
-import Header from "../Components/Header";
-import Footer from "../Components/Footer";
-
-import "../css/Servicios.css";
 import { useState } from "react";
-
 import planIndividual from "../assets/Servicios/plan-individual.png";
-import planContinuo from "../assets/Servicios/plan-continuo.png";
+import planContinuo from "../assets/Servicios/plan-continuo.jpg";
+import Header from "../Components/Header.jsx";
+import Footer from "../Components/Footer.jsx";
+import "../css/Servicios.css";
 
 export default function Servicios() {
   const [visibleInfo, setVisibleInfo] = useState({
@@ -14,9 +12,9 @@ export default function Servicios() {
   });
 
   const mostrarInfo = (plan) => {
-    setVisibleInfo((prevState) => ({
-      ...prevState,
-      [plan]: !prevState[plan],
+    setVisibleInfo((prev) => ({
+      ...prev,
+      [plan]: !prev[plan],
     }));
   };
 
@@ -24,20 +22,20 @@ export default function Servicios() {
     <>
       <Header />
       <section className="sn-servicios">
-        <div className="intro">
-          <h1>Nuestros servicios de auditoría y consultoría</h1>
+        <div className="intro-servicios">
+          <h1>Servicios de auditoría y consultoría</h1>
           <p>
-            Ofrecemos soluciones adaptadas a las necesidades de cada concesionario
+            Acompañamos a concesionarios y empresas en la evaluación de procesos,
+            asegurando estándares de excelencia y resultados sostenibles.
           </p>
-          <button className="btn-acceso">Acceso</button>
         </div>
 
-        <div className="planes">
-          {/* Plan Individual */}
-          <div className="plan" id="plan-individual">
+        {/* Plan Individual */}
+        <div className="plan plan-individual">
+          <div className="planes-texto">
             <h2>Plan individual</h2>
             <p className="subtitulo">
-              Un subtítulo para esta sección, tan largo o tan corto como quieras
+              Auditorías puntuales adaptadas a cada concesionario.
             </p>
             <button className="btn-acceso">
               <a href="acceso.php">Acceso</a>
@@ -48,21 +46,30 @@ export default function Servicios() {
             >
               {visibleInfo.individual ? "Ver menos" : "Ver más"}
             </button>
-            {visibleInfo.individual && (
-              <div className="info-extra" id="info-individual">
-                <p>
-                  Este plan está diseñado para negocios únicos que necesitan auditorías puntuales y personalizadas.
-                </p>
-              </div>
-            )}
-            <img src={planIndividual} alt="Frutas plan individual" />
+            <div
+              className={`info-extra ${visibleInfo.individual ? "visible" : ""}`}
+            >
+              <p>
+                Este plan está pensado para negocios que requieren evaluaciones
+                específicas en momentos clave, ofreciendo un análisis claro y
+                personalizado sin compromisos a largo plazo.
+              </p>
+            </div>
           </div>
+          <div className="planes-img">
+            <img src={planIndividual} alt="Plan individual" />
+          </div>
+        </div>
 
-          {/* Plan Continuo */}
-          <div className="plan" id="plan-continuo">
+        {/* Plan Continuo */}
+        <div className="plan plan-continuo">
+          <div className="planes-img">
+            <img src={planContinuo} alt="Plan continuo" />
+          </div>
+          <div className="planes-texto">
             <h2>Plan continuo</h2>
             <p className="subtitulo">
-              Un subtítulo para esta sección, tan largo o tan corto como quieras
+              Supervisión constante para garantizar la mejora continua.
             </p>
             <button className="btn-acceso">
               <a href="acceso.php">Acceso</a>
@@ -73,14 +80,16 @@ export default function Servicios() {
             >
               {visibleInfo.continuo ? "Ver menos" : "Ver más"}
             </button>
-            {visibleInfo.continuo && (
-              <div className="info-extra" id="info-continuo">
-                <p>
-                  Este plan ofrece seguimiento constante, ideal para cadenas o franquicias que requieren control regular.
-                </p>
-              </div>
-            )}
-            <img src={planContinuo} alt="Frutas plan continuo" />
+            <div
+              className={`info-extra ${visibleInfo.continuo ? "visible" : ""}`}
+            >
+              <p>
+                Ideal para cadenas o grupos de concesionarios, este plan asegura
+                un seguimiento regular de procesos y estándares, permitiendo
+                detectar oportunidades de mejora y mantener la calidad en todo
+                momento.
+              </p>
+            </div>
           </div>
         </div>
       </section>
