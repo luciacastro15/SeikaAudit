@@ -8,9 +8,9 @@ export default function Footer() {
         <div className="pie-izquierda">
           <img src={logo2} alt="Logo" className="logo-footer" />
           <ul className="enlaces-footer">
-            <li><strong>📤:</strong> contacto@serraaudit.com</li>
-            <li><strong>📞:</strong> +34 912 345 678</li>
-            <li><strong>🔗:</strong> www.serraaudit.com</li>
+            <li>Auditorías personalizadas</li>
+            <li>Soluciones originales</li>
+            <li>Resultados seguros</li>
           </ul>
         </div>
 

@@ -1,0 +1,71 @@
+.concesionarios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  gap: 2rem;
+}
+
+.concesionario-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.concesionario-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+/* Contenido principal: texto + foto centrados verticalmente */
+.card-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* centrado vertical */
+  gap: 1.5rem;
+}
+
+.concesionario-info {
+  flex: 1;
+}
+
+.concesionario-nombre {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  color: #333;
+}
+
+/* Foto a la derecha, centrada verticalmente */
+.concesionario-foto {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Botón separado abajo */
+.card-footer {
+  margin-top: 1.5rem;
+  text-align: right;
+}
+
+.btn-crear {
+  padding: 0.6rem 1rem;
+  background-color: black;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-crear:hover {
+  background-color: 333;
+}

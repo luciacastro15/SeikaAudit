@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { login_user } from "../api/auth";
-import loginImage from "../assets/Formularios_accesos/Login.webp"; // Ajusta la ruta según tu estructura
-import "../css/Registro.css"; // Asegúrate de tener el CSS correspondiente
+import loginImage from "../assets/Formularios_accesos/Login.webp"; 
+import "../css/Login.css"; 
+import Header from "../Components/Header.jsx";
+
+
 
 export function Login() {
   const [formData, setFormData] = useState({ email: "", password: "" });
@@ -19,16 +22,13 @@ export function Login() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Datos del formulario:", formData);
     setError("");
 
     try {
       const response = await login_user(formData.email, formData.password);
-      console.log("Respuesta del servidor:", response);
-      // Suponiendo que la respuesta contiene un token y datos del usuario
       localStorage.setItem("token", response.access_token);
       localStorage.setItem("user", JSON.stringify(response.usuario));
-      console.log("Usuario logueado:", response.usuario);
+
       if (response.usuario.rol_id === 2) {
         navigate("/jefes/homejefes");
       } else if (response.usuario.rol_id === 3) {
@@ -42,10 +42,13 @@ export function Login() {
   };
 
   return (
-    <div>
+        <>
+          <Header />
+    
+    <section className="section-login">
       <div className="login-container">
         <div className="login-container-form col-6">
-          <h2>INICIAR SESIÓN</h2>
+          <h2>Bienvenido, ¡Inicia sesión!</h2>
           {error && <p style={{ color: "red" }}>{error}</p>}
           <form onSubmit={handleSubmit}>
             <div>
@@ -72,6 +75,7 @@ export function Login() {
             </div>
             <button type="submit">Entrar</button>
           </form>
+          <br />
           <p>
             ¿No tienes cuenta? <Link to="/registro">Regístrate aquí</Link>
           </p>
@@ -80,6 +84,7 @@ export function Login() {
           <img src={loginImage} alt="Login visual" />
         </div>
       </div>
-    </div>
+    </section>
+    </>
   );
 }

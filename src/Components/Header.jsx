@@ -27,6 +27,7 @@ export default function Header() {
             <li><Link to="/">Inicio</Link></li>
             <li><Link to="/about">Sobre nosotros</Link></li>
             <li><Link to="/servicios">Servicios</Link></li>
+            <li><Link to="/contacto">Contacto</Link></li>
             <li>
               <Link to="/registro">
                 <button >Registro</button>

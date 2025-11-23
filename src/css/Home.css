@@ -1,205 +1,5 @@
-/* * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #f9f9f9;
-  color: #333;
-}
-
-.hero {
-  position: relative;
-  width: 100%;
-  height: 60vh;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 1;
-}
-
-.banner img {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
-}
-
-.texto-hero {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  max-width: 800px;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-}
-
-.texto-hero h1 {
-  font-size: 2.8rem;
-  margin-bottom: 1rem;
-}
-
-.texto-hero p {
-  font-size: 1.3rem;
-  margin-bottom: 2rem;
-}
-
-.texto-hero button {
-  background-color: black;
-  color: white;
-  padding: 0.8rem 1.5rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.texto-hero button:hover {
-  background-color: #333;
-}
-
-.tarjetas {
-  width: 80%;
-  margin: 4rem auto;
-  text-align: center;
-}
-
-.tarjetas h2 {
-  margin-bottom: 2rem;
-  font-size: 2rem;
-}
-
-.tarjetas .fila {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-}
-
-.tarjeta {
-  text-align: center;
-  padding: 1rem;
-  width: 30%;
-}
-
-.tarjeta img {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 1rem;
-}
-
-.tarjeta h3 {
-  margin-bottom: 0.5rem;
-}
-
-.col-4 { flex: 0 0 30%; }
-.col-3 { flex: 0 0 22%; }
-
-.ventajas-digitales {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 3rem;
-  width: 80%;
-  margin: 4rem auto;
-  align-items: flex-start;
-  padding: 4rem 0;
-}
-
-.contenedor-ventajas {
-  flex: 1 1 50%;
-}
-
-.contenedor-ventajas h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  color: #222;
-}
-
-.bloques-ventaja {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.ventaja h3 {
-  font-size: 1.3rem;
-  margin-bottom: 0.5rem;
-  color: #333;
-}
-
-.ventaja p {
-  font-size: 1rem;
-  color: #555;
-  line-height: 1.6;
-}
-
-.botones-ventaja {
-  margin-top: 2rem;
-}
-
-.botones-ventaja button {
-  margin-right: 1rem;
-  padding: 0.8rem 1.5rem;
-  background-color: black;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: background-color 0.3s ease;
-}
-
-.botones-ventaja button:hover {
-  background-color: #333;
-}
-
-.imagen-ventaja {
-  flex: 1 1 40%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.imagen-ventaja img {
-  max-width: 100%;
-  border-radius: 12px;
-}
-
- */
-/* --- Reset y base --- */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #f9f9f9;
-  color: #333;
-}
-
 /* --- Hero --- */
-.hero {
+.home-hero {
   position: relative;
   width: 100%;
   height: 60vh;
@@ -210,7 +10,7 @@ body {
   color: white;
 }
 
-.hero::before {
+.home-hero::before {
   content: "";
   position: absolute;
   top: 0; left: 0;
@@ -219,7 +19,7 @@ body {
   z-index: 1;
 }
 
-.banner img {
+.home-banner img {
   position: absolute;
   top: 0; left: 0;
   width: 100%;
@@ -228,7 +28,7 @@ body {
   z-index: 0;
 }
 
-.texto-hero {
+.home-texto-hero {
   position: relative;
   z-index: 2;
   text-align: center;
@@ -240,17 +40,17 @@ body {
   height: 100%;
 }
 
-.texto-hero h1 {
+.home-texto-hero h1 {
   font-size: 2.8rem;
   margin-bottom: 1rem;
 }
 
-.texto-hero p {
+.home-texto-hero p {
   font-size: 1.3rem;
   margin-bottom: 2rem;
 }
 
-.texto-hero button {
+.home-button {
   background-color: black;
   color: white;
   padding: 0.8rem 1.5rem;
@@ -260,66 +60,69 @@ body {
   transition: background-color 0.3s ease;
 }
 
-.texto-hero button:hover {
+.home-button:hover {
   background-color: #333;
 }
 
 /* --- Tarjetas --- */
-.tarjetas {
+.home-tarjetas {
   width: 80%;
   margin: 4rem auto;
+}
+
+.home-tarjetas-titulo {
   text-align: center;
-}
-
-.tarjetas h2 {
   margin-bottom: 2rem;
+}
+
+.home-tarjetas-titulo h2 {
   font-size: 2rem;
+  font-weight: 700;
+  color: #000;
 }
 
-.tarjetas .fila {
+.home-tarjetas-fila {
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   gap: 2rem;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
+  flex-wrap: wrap;
 }
 
-.tarjeta {
-  flex: 0 0 30%;
-  scroll-snap-align: start;
+.home-tarjeta {
+  flex: 1 1 30%;
   padding: 2rem;
-  background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff;
+  text-align: center;
 }
 
-.tarjeta:hover {
+.home-tarjeta:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 16px rgba(0,0,0,0.12);
 }
 
-.tarjeta img {
+.home-tarjeta img {
   width: 100%;
   border-radius: 10px;
   margin-bottom: 1rem;
 }
 
-.tarjeta h3 {
-  margin-bottom: 0.5rem;
+.home-tarjeta h3 {
   font-size: 1.3rem;
-  color: #222;
+  margin-bottom: 0.5rem;
+  color: #111;
 }
 
-.tarjeta p {
+.home-tarjeta p {
   font-size: 1rem;
-  color: #555;
+  color: #444;
 }
 
-/* --- Ventajas integradas --- */
-.ventajas-digitales {
+/* --- Ventajas --- */
+.home-ventajas {
   display: flex;
   flex-wrap: wrap;
   gap: 3rem;
@@ -327,41 +130,42 @@ body {
   margin: 4rem auto;
   align-items: flex-start;
   padding: 4rem 0;
+  text-align: justify;
 }
 
-.contenedor-ventajas {
+.home-contenedor-ventajas {
   flex: 1 1 50%;
 }
 
-.contenedor-ventajas h2 {
+.home-contenedor-ventajas h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
   color: #222;
 }
 
-.bloques-ventaja {
+.home-bloques-ventaja {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
-.ventaja h3 {
+.home-ventaja h3 {
   font-size: 1.3rem;
   margin-bottom: 0.5rem;
   color: #333;
 }
 
-.ventaja p {
+.home-ventaja p {
   font-size: 1rem;
   color: #555;
   line-height: 1.6;
 }
 
-.botones-ventaja {
+.home-botones-ventaja {
   margin-top: 2rem;
 }
 
-.botones-ventaja button {
+.home-botones-ventaja button {
   margin-right: 1rem;
   padding: 0.8rem 1.5rem;
   background-color: black;
@@ -370,41 +174,70 @@ body {
   border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  width: auto;
 }
 
-.botones-ventaja button:hover {
+.home-botones-ventaja button:hover {
   background-color: #333;
 }
 
-.imagen-ventaja {
+.home-imagen-ventaja {
   flex: 1 1 40%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.imagen-ventaja img {
+.home-imagen-ventaja img {
   max-width: 100%;
   border-radius: 12px;
 }
 
-
-
 /* --- Responsive --- */
+
+/* Pantallas grandes */
 @media (min-width: 1200px) {
-  .col-6 { width: 50%; }
+  .home-tarjeta {
+    flex: 1 1 30%;
+  }
 }
 
+/* Tablets y pantallas medianas */
 @media (max-width: 900px) {
-  .tarjeta { flex: 0 0 45%; }
-  .col-6 { width: 100%; }
-  .ventajas-digitales { flex-direction: column; text-align: center; }
-  .contenedor-ventajas, .imagen-ventaja { flex: 1 1 100%; }
-  .botones-ventaja button { margin-bottom: 1rem; }
+  .home-tarjetas-fila {
+    justify-content: center;
+  }
+
+  .home-tarjeta {
+    flex: 1 1 45%;
+  }
+
+  .home-ventajas {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home-contenedor-ventajas,
+  .home-imagen-ventaja {
+    flex: 1 1 100%;
+  }
+
+  .home-botones-ventaja button {
+    margin-bottom: 1rem;
+  }
 }
 
+/* Móviles */
 @media (max-width: 600px) {
-  .tarjeta { flex: 0 0 90%; }
-  .texto-hero h1 { font-size: 2rem; }
-  .texto-hero p { font-size: 1rem; }
+  .home-tarjeta {
+    flex: 1 1 100%;
+  }
+
+  .home-texto-hero h1 {
+    font-size: 2rem;
+  }
+
+  .home-texto-hero p {
+    font-size: 1rem;
+  }
 }

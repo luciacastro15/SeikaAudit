@@ -4,6 +4,7 @@ import { create_auditoria } from "../../api/auditorias.js";
 import { create_respuesta } from "../../api/respuestas.js";
 import { get_preguntas } from "../../api/preguntas.js";
 import { get_bloques } from "../../api/bloques.js";
+import "../../css/Perfiles/Auditores/CrearAuditoria.css";
 
 export default function CrearAuditoria() {
   const location = useLocation();

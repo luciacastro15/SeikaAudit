@@ -1,8 +1,8 @@
-
-import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { get_concesionarios } from '../../api/concesionarios.js';
-import '../../css/ListaConcesionarios.css';
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { get_concesionarios } from "../../api/concesionarios.js";
+import "../../css/Perfiles/Auditores/ListaConcesionarios.css";
+import conce from "../../assets/Perfiles/conce.png";
 
 export function ListaConcesionarios() {
   const [concesionarios, setConcesionarios] = useState([]);
@@ -12,9 +12,9 @@ export function ListaConcesionarios() {
 
   useEffect(() => {
     const fetchConcesionarios = async () => {
-      const token = localStorage.getItem('token');
+      const token = localStorage.getItem("token");
       if (!token) {
-        navigate('/login');
+        navigate("/login");
         return;
       }
       try {
@@ -31,35 +31,61 @@ export function ListaConcesionarios() {
   }, [navigate]);
 
   const handleCrearAuditoria = (concesionario_id, jefe_id) => {
-    navigate('/auditores/crear-auditoria', {
-      state: { concesionario_id, jefe_id }
+    navigate("/auditores/crear-auditoria", {
+      state: { concesionario_id, jefe_id },
     });
   };
 
   if (loading) return <p className="loading">Cargando concesionarios...</p>;
   if (error) return <p className="error">Error: {error}</p>;
-  if (concesionarios.length === 0) return <p className="empty">No hay concesionarios registrados.</p>;
+  if (concesionarios.length === 0)
+    return <p className="empty">No hay concesionarios registrados.</p>;
 
   return (
-  <div className="concesionarios-container">
-    <h1 className="title">Listado de Concesionarios</h1>
-    <div className="concesionarios-grid">
-      {concesionarios.map((c) => (
-        <div key={c.id} className="concesionario-card">
-          <h2>{c.nombre}</h2>
-          <p><strong>Ubicación:</strong> {c.ubicacion}</p>
-          <p><strong>Teléfono:</strong> {c.telefono}</p>
-          <p><strong>Marca:</strong> {c.marca}</p>
-          <p><strong>Jefe:</strong> {c.jefe?.nombre}</p>
-          <button
-            className="btn-crear"
-            onClick={() => handleCrearAuditoria(c.id, c.jefe?.id)}
-          >
-            + Crear Auditoría
-          </button>
+    <>
+      <div className="concesionarios-container">
+        <br />
+        <h1 className="title">Listado de Concesionarios</h1>
+        <br />
+        <div className="concesionarios-grid">
+          {concesionarios.map((c) => (
+            <div key={c.id} className="concesionario-card">
+              <div className="card-content">
+                <div className="concesionario-info">
+                  <h2 className="concesionario-nombre">{c.nombre}</h2>
+                  <p>
+                    <strong>Ubicación:</strong> {c.ubicacion}
+                  </p>
+                  <p>
+                    <strong>Teléfono:</strong> {c.telefono}
+                  </p>
+                  <p>
+                    <strong>Marca:</strong> {c.marca}
+                  </p>
+                  <p>
+                    <strong>Jefe:</strong> {c.jefe?.nombre}
+                  </p>
+                </div>
+
+                <img
+                  src={conce}
+                  alt={`Foto de ${c.nombre}`}
+                  className="concesionario-foto"
+                />
+              </div>
+
+              <div className="card-footer">
+                <button
+                  className="btn-crear"
+                  onClick={() => handleCrearAuditoria(c.id, c.jefe?.id)}
+                >
+                  + Crear Auditoría
+                </button>
+              </div>
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
-  </div>
-);
+      </div>
+    </>
+  );
 }

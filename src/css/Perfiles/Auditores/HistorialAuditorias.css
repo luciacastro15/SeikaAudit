@@ -1,0 +1,79 @@
+/* Contenedor general de auditorías */
+.auditorias-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* Tarjeta individual */
+.auditoria-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+  opacity: 0;
+  transform: scale(0.95);
+  animation: fadeInScale 0.4s ease forwards;
+}
+
+/* Animación de entrada */
+@keyframes fadeInScale {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Jerarquía visual */
+.auditoria-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.auditoria-card .fecha {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.auditoria-card .detalle {
+  font-size: 0.9rem;
+  color: #444;
+  margin-bottom: 0.4rem;
+}
+
+/* Botón Ver más */
+.auditoria-card .ver-mas {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.auditoria-card .ver-mas:hover {
+  background-color: #0056b3;
+}
+
+.respuesta p, .card-body p{
+  text-align: justify;
+}
+
+/* Responsive: una sola columna en pantallas estrechas */
+@media (max-width: 768px) {
+  .auditorias-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import '../../css/FormularioAuditoria.css';
+import '../../css/Perfiles/Auditores/FormularioAuditoria.css';
 
 export function FormularioAuditoria({ onSubmit }) {
   const [form, setForm] = useState({

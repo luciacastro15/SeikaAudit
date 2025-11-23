@@ -49,6 +49,7 @@ body {
   line-height: 1.8;
   max-width: 700px;
   text-align: left;
+  text-align: justify;
 }
 
 /* --- Historia con más aire --- */
@@ -86,6 +87,7 @@ body {
 }
 
 .historia-text p {
+  text-align: justify;
   font-size: 1.1rem;
   color: #444;
   line-height: 1.8;

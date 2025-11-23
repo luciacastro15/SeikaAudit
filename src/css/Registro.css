@@ -1,40 +1,42 @@
+.section-registro {
+  /* height: 100vh; */
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+}
+
 /* Contenedor principal */
 
 .registro-container {
-  margin: auto;
-  width: 70%;
+  margin: 0px auto ;
   display: flex;
   flex-wrap: wrap;
-  /* min-height: 100vh; */
-  background-color: #f9f9f9;
   border-radius: 10px;
   color: #1a1a1a;
   font-family: "Segoe UI", sans-serif;
-  padding: 2rem;
 }
 
 /* Texto y formulario */
 .registro-container-texto {
   flex: 1;
+  min-width: 300px;
+  max-width: 500px;
   padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
 .registro-container-texto h2 {
   font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #333333;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  color: #111;
 }
 
-form > div {
-  margin-bottom: 1rem;
-}
 
 label {
   display: block;
-  margin-bottom: 0.5rem;
   font-weight: 400;
   text-align: left;
 }
@@ -50,19 +52,19 @@ select {
 }
 
 button {
-  margin-top: 1rem;
-  padding: 0.75rem 1.5rem;
-  background-color: #1a1a1a;
-  color: #ffffff;
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #111;
+  color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 4px;
+  font-size: 1rem;
   cursor: pointer;
-  font-weight: 600;
   transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #333333;
+  background-color: #333;
 }
 
 /* Enlace de login */
