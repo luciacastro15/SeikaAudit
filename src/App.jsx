@@ -9,11 +9,15 @@ import About from './Pages/About.jsx';
 import Acceso from './Pages/Acceso.jsx';
 import { Registro } from './Pages/Registro.jsx';
 import { Login } from './Pages/Login.jsx';
-import { HistorialAuditorias } from "./Pages/Auditores/HistorialAuditorias.jsx";
+import { HistorialAuditoriasA } from "./Pages/Auditores/HistorialAuditoriasA.jsx";
 import { AuditoresLayout } from "./Pages/Auditores/AuditoresLayout.jsx";
 import { ListaConcesionarios } from "./Pages/Auditores/Concesionarios.jsx";
 import PerfilAuditor from "./Pages/Auditores/Perfil.jsx";
 import CrearAuditoria from './Pages/Auditores/CrearAuditoria.jsx'
+
+import {JefesLayout} from './Pages/Jefes/JefesLayout.jsx';
+import PerfilJefes from './Pages/Jefes/PerfilJefes.jsx';
+import { HistorialAuditoriasJ } from "./Pages/Jefes/HistorialAuditoriasJ.jsx";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -32,9 +36,16 @@ function App() {
         <Route path="/auditores" element={<AuditoresLayout />}>
           <Route index element={<PerfilAuditor />} />
           <Route path="perfil" element={<PerfilAuditor />} />
-          <Route path="historial" element={<HistorialAuditorias />} />
+          <Route path="historial" element={<HistorialAuditoriasA />} />
           <Route path="concesionario" element={<ListaConcesionarios />} />
+          <Route path="crear-auditoria" element={<CrearAuditoria />} />
         </Route>
+        <Route path="/jefes" element={<JefesLayout />}>
+          <Route index element={<PerfilJefes />} />
+          <Route path="perfil" element={<PerfilJefes />} />
+          <Route path="historial" element={<HistorialAuditoriasJ />} />
+        </Route>
+
       </Routes>
     </BrowserRouter>
   );

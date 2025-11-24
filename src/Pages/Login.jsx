@@ -30,7 +30,7 @@ export function Login() {
       localStorage.setItem("user", JSON.stringify(response.usuario));
 
       if (response.usuario.rol_id === 2) {
-        navigate("/jefes/homejefes");
+        navigate("/jefes/perfil");
       } else if (response.usuario.rol_id === 3) {
         navigate("/auditores");
       } else {
