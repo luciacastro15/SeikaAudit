@@ -4,17 +4,38 @@ export async function get_concesionarios() {
     return response.data;
 }
 
-export async function create_concesionarios(concesionario) {
-    const response = await client.post("/concesionarios", concesionario);
+export async function create_concesionarios(formData) {
+    const response = await client.post(
+        "/concesionarios",
+        formData,
+        {
+            headers: {
+                "Content-Type": "multipart/form-data",
+            },
+        }
+    );
+
     return response.data;
 }
 
-export async function update_concesionarios(id, concesionario) {
-    const response = await client.post(`/concesionarios/${id}`, concesionario);
+
+export async function update_concesionarios(id, formData) {
+    formData.append("_method", "PUT");
+
+    const response = await client.post(
+        `/concesionarios/${id}`,
+        formData,
+        {
+            headers: {
+                "Content-Type": "multipart/form-data"
+            }
+        }
+    );
+
     return response.data;
 }
+
 
 export async function delete_concesionarios(id) {
-    const response = await client.post(`/concesionarios/${id}`);
-    return response.data;
+    return client.delete(`/concesionarios/${id}`).then(res => res.data);
 }
