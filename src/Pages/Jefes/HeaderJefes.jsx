@@ -37,6 +37,9 @@ export default function HeaderJefes() {
                 <img src={perfil} alt="Perfil" style={{ width: "40px" }} />
               </Link>
             </li>
+            <li>
+              <Link to="/jefes/mi-plan">Plan</Link>
+            </li>
           </ul>
         </nav>
 

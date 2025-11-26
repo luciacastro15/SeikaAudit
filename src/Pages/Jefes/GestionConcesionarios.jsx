@@ -11,6 +11,7 @@ export default function GestionConcesionarios() {
   const [concesionarios, setConcesionarios] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const [canCreate, setCanCreate] = useState(true);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -27,6 +28,11 @@ export default function GestionConcesionarios() {
         const data = await get_concesionarios();
         console.log(data.concesionarios);
         setConcesionarios(data.concesionarios);
+        if (user.plan === "individual" && data.concesionarios.length >= 1) {
+          setCanCreate(false);
+        } else {
+          setCanCreate(true);
+        }
       } catch (error) {
         setError(error.message || "Error al cargar concesionarios");
       } finally {
@@ -57,9 +63,20 @@ export default function GestionConcesionarios() {
         type="button"
         className="btn-crear"
         onClick={() => navigate("/jefes/concesionarios/crear")}
+        disabled={!canCreate}
+        style={{
+          backgroundColor: canCreate ? "black" : "#888",
+          cursor:canCreate ? "pointer":"not-allowed",
+          opacity:canCreate ? 1:0.5 
+        }}
       >
         Crear Concesionario
       </button>
+      {!canCreate && (
+        <p>
+          Tu plan individual solo permite un concesionario
+        </p>
+      )}
       <h1 className="concesionarios-title">Gestión de Concesionarios</h1>
 
       <div className="concesionarios-grid">

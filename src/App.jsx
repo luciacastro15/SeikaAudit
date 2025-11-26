@@ -21,6 +21,7 @@ import { HistorialAuditoriasJ } from "./Pages/Jefes/HistorialAuditoriasJ.jsx";
 import GestionConcesionarios from "./Pages/Jefes/GestionConcesionarios.jsx";
 import CrearConcesionario from "./Pages/Jefes/CrearConcesionario.jsx";
 import EditarConcesionario from "./Pages/Jefes/EditarConcesionario.jsx";
+import MiPlan from "./Pages/Jefes/miplan.jsx";
 
 function App() {
   return (
@@ -52,6 +53,10 @@ function App() {
           <Route
             path="concesionarios/editar/:id"
             element={<EditarConcesionario />}
+          />
+          <Route
+            path="mi-plan"
+            element={<MiPlan />}
           />
         </Route>
       </Routes>
