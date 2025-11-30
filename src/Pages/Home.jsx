@@ -60,7 +60,7 @@ export default function Home() {
         {/* Ventajas */}
         <section className="home-ventajas">
           <div className="home-contenedor-ventajas">
-            <h2>Digitaliza tus auditorías de principio a fin</h2>
+            <h2>Gestión inteligente de auditorías</h2>
             <div className="home-bloques-ventaja">
               <div className="home-ventaja">
                 <h3>Ahorra tiempo en la gestión administrativa</h3>
@@ -85,7 +85,7 @@ export default function Home() {
               </div>
             </div>
             <div className="home-botones-ventaja">
-              <Link to="/acceso">
+              <Link to="/registro">
                 <button>Acceso</button>
               </Link>
               <Link to="/contacto">

@@ -1,71 +1,121 @@
-.concesionarios-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
-  gap: 2rem;
+/* Contenedor principal */
+.concesionarios-container {
+  max-width: 1200px;
+  
+  margin: 0 auto;
+  padding: 20px;
 }
 
+/* Título */
+.title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+/* Grid de concesionarios */
+.concesionarios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+/* Tarjeta */
 .concesionario-card {
-  background: #fff;
-  border: 1px solid #eee;
+  background: #ffffff;
   border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .concesionario-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
 }
 
-/* Contenido principal: texto + foto centrados verticalmente */
+/* Contenido de la tarjeta */
 .card-content {
   display: flex;
   justify-content: space-between;
-  align-items: center; /* centrado vertical */
-  gap: 1.5rem;
+  padding: 15px;
 }
 
+/* Información del concesionario */
 .concesionario-info {
   flex: 1;
+  margin-right: 10px;
+  text-align: justify;
 }
 
 .concesionario-nombre {
   font-size: 1.3rem;
-  font-weight: 600;
-  margin-bottom: 0.8rem;
-  color: #333;
+  font-weight: bold;
+  color: #34495e;
+  margin-bottom: 10px;
 }
 
-/* Foto a la derecha, centrada verticalmente */
+.concesionario-info p {
+  margin: 5px 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* Foto */
+.conce-foto {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
 .concesionario-foto {
-  width: 160px;
-  height: 160px;
+  width: 150px;
+  height: 120px;
   object-fit: cover;
   border-radius: 8px;
+  border: 2px solid #eee;
 }
 
-/* Botón separado abajo */
+/* Footer con botón */
 .card-footer {
-  margin-top: 1.5rem;
+  padding: 10px 15px;
+  border-top: 1px solid #f0f0f0;
   text-align: right;
 }
 
 .btn-crear {
-  padding: 0.6rem 1rem;
-  background-color: black;
+  background: black;
   color: #fff;
-  font-size: 0.9rem;
-  font-weight: 500;
   border: none;
+  padding: 8px 14px;
   border-radius: 6px;
+  font-size: 0.95rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background 0.2s ease;
 }
 
 .btn-crear:hover {
-  background-color: 333;
+  background: grey;
+}
+
+/* Estados */
+.loading,
+.error,
+.empty {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-top: 20px;
+}
+
+.loading {
+  color: grey;
+}
+
+.error {
+  color: #e74c3c;
+}
+
+.empty {
+  color: #7f8c8d;
 }

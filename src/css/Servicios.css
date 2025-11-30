@@ -6,11 +6,9 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
   line-height: 1.6;
   background-color: #fff;
   color: #111;
-
 
 }
 
@@ -26,8 +24,8 @@ body {
 }
 
 .intro-servicios h1 {
-  font-size: 2.4rem;
-  font-weight: 800;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
   margin-bottom: 1rem;
 }
 

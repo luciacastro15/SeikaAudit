@@ -30,7 +30,7 @@ export default function Header() {
             <li><Link to="/contacto">Contacto</Link></li>
             <li>
               <Link to="/registro">
-                <button >Registro</button>
+                <button >Acceso</button>
               </Link>
             </li>
           </ul>

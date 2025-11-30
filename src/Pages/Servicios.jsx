@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
+
 import planIndividual from "../assets/Servicios/plan-individual.png";
 import planContinuo from "../assets/Servicios/plan-continuo.jpg";
 import Header from "../Components/Header.jsx";
@@ -25,8 +27,9 @@ export default function Servicios() {
         <div className="intro-servicios">
           <h1>Servicios de auditoría y consultoría</h1>
           <p>
-            Acompañamos a concesionarios y empresas en la evaluación de procesos,
-            asegurando estándares de excelencia y resultados sostenibles.
+            Acompañamos a concesionarios y empresas en la evaluación de
+            procesos, asegurando estándares de excelencia y resultados
+            sostenibles.
           </p>
         </div>
 
@@ -37,9 +40,10 @@ export default function Servicios() {
             <p className="subtitulo">
               Auditorías puntuales adaptadas a cada concesionario.
             </p>
-            <button className="btn-acceso">
-              <a href="acceso.php">Acceso</a>
-            </button>
+            <Link to="/registro">
+              <button>Acceso</button>
+            </Link>
+
             <button
               className="btn-vermas"
               onClick={() => mostrarInfo("individual")}
@@ -47,7 +51,9 @@ export default function Servicios() {
               {visibleInfo.individual ? "Ver menos" : "Ver más"}
             </button>
             <div
-              className={`info-extra ${visibleInfo.individual ? "visible" : ""}`}
+              className={`info-extra ${
+                visibleInfo.individual ? "visible" : ""
+              }`}
             >
               <p>
                 Este plan está pensado para negocios que requieren evaluaciones
@@ -71,9 +77,9 @@ export default function Servicios() {
             <p className="subtitulo">
               Supervisión constante para garantizar la mejora continua.
             </p>
-            <button className="btn-acceso">
-              <a href="acceso.php">Acceso</a>
-            </button>
+            <Link to="/registro">
+              <button>Acceso</button>
+            </Link>
             <button
               className="btn-vermas"
               onClick={() => mostrarInfo("continuo")}

@@ -54,24 +54,29 @@ export function ListaConcesionarios() {
                 <div className="concesionario-info">
                   <h2 className="concesionario-nombre">{c.nombre}</h2>
                   <p>
-                    <strong>Ubicación:</strong> {c.ubicacion}
+                    <strong>📌</strong> {c.ubicacion}
                   </p>
                   <p>
-                    <strong>Teléfono:</strong> {c.telefono}
+                    <strong>📞</strong> {c.telefono}
                   </p>
                   <p>
-                    <strong>Marca:</strong> {c.marca}
+                    <strong>🚗</strong> {c.marca}
                   </p>
                   <p>
-                    <strong>Jefe:</strong> {c.jefe?.nombre}
+                    <strong>👔</strong> {c.jefe?.nombre}
                   </p>
                 </div>
-
-                <img
-                  src={conce}
-                  alt={`Foto de ${c.nombre}`}
-                  className="concesionario-foto"
-                />
+                <div className="conce-foto">
+                  <img
+                    src={
+                      c.img
+                        ? `${import.meta.env.VITE_IMG}/${c.img}`
+                        : "https://www.shutterstock.com/image-vector/default-ui-image-placeholder-wireframes-600nw-1037719192.jpg"
+                    }
+                    alt={`Foto de ${c.nombre}`}
+                    className="concesionario-foto"
+                  />
+                </div>
               </div>
 
               <div className="card-footer">
@@ -89,3 +94,4 @@ export function ListaConcesionarios() {
     </>
   );
 }
+

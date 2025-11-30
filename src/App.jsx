@@ -5,6 +5,7 @@ import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Servicios from "./Pages/Servicios.jsx";
 import Home from "./Pages/Home.jsx";
+import Contacto from "./Pages/Contacto.jsx";
 import About from "./Pages/About.jsx";
 import Acceso from "./Pages/Acceso.jsx";
 import { Registro } from "./Pages/Registro.jsx";
@@ -31,6 +32,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/acceso" element={<Acceso />} />
+        <Route path="/contacto" element={<Contacto />} />
         <Route path="/login" element={<Login />} />
         <Route path="/registro" element={<Registro />} />
         {/* <Route path="/jefes/homejefes" element={<HomeJefes />} /> */}

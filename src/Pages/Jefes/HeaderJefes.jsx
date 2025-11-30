@@ -33,13 +33,14 @@ export default function HeaderJefes() {
               <Link to="/jefes/historial">Historial Auditorías</Link>
             </li>
             <li>
+              <Link to="/jefes/mi-plan">Plan</Link>
+            </li>
+            <li>
               <Link to="/jefes/perfil">
                 <img src={perfil} alt="Perfil" style={{ width: "40px" }} />
               </Link>
             </li>
-            <li>
-              <Link to="/jefes/mi-plan">Plan</Link>
-            </li>
+            
           </ul>
         </nav>
 

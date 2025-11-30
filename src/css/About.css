@@ -6,7 +6,6 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
   line-height: 1.6;
   background-color: #fff;
   color: #111;
@@ -17,6 +16,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   min-height: 30vh;
+  border: 1px solid grey;
 }
 
 /* Columna izquierda: imagen como encabezado */
@@ -59,8 +59,9 @@ body {
   gap: 3rem;
   width: 80%;
   margin: 5rem auto;
-  align-items: flex-start;
+  align-items: center; /* cambia flex-start por center */
 }
+
 
 .historia-text {
   flex: 1 1 50%;
@@ -94,14 +95,13 @@ body {
 }
 
 .historia-img {
-  flex: 1 1 45%;
+  flex: 1 1 45%; 
 }
-
 .historia-img img {
-  width: 100%;
+  max-width: 100%; 
+  height: auto; 
   border-radius: 10px;
-  object-fit: cover;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* --- Nuestro equipo --- */
@@ -116,7 +116,7 @@ body {
   max-width: 1000px;
   margin: 0 auto 4rem;
   text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   border-radius: 8px;
 }
 
@@ -157,7 +157,7 @@ body {
   border: 1px solid #ddd;
   border-radius: 10px;
   background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
 }
 
