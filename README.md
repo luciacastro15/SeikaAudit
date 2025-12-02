@@ -21,3 +21,6 @@ cd C:\Users\castr\Desktop\react\tfg
 npm run dev
 
 npm install axios
+
+------------------------
+

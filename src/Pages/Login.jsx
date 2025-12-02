@@ -34,7 +34,7 @@ export function Login() {
       } else if (response.usuario.rol_id === 3) {
         navigate("/auditores");
       } else {
-        navigate("/");
+        navigate("/admin");
       }
     } catch (err) {
       setError("Error al iniciar sesión. Intenta más tarde.");

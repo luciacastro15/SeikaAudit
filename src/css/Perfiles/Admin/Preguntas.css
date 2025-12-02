@@ -1,0 +1,75 @@
+.preguntas-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.error {
+  color: red;
+  margin-bottom: 10px;
+}
+
+/* FORMULARIO */
+.pregunta-form {
+  background: #f7f7f7;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pregunta-form textarea,
+.pregunta-form select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+}
+
+.btn-guardar {
+  background: #4caf50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-cancelar {
+  background: #999;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* TABLA */
+.tabla-preguntas {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabla-preguntas th,
+.tabla-preguntas td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.tabla-preguntas tr:hover {
+  background-color: #f0f0f0;
+}
+
+.btn-editar,
+.btn-borrar {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.btn-editar:hover,
+.btn-borrar:hover {
+  transform: scale(1.15);
+}

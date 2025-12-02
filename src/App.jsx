@@ -23,6 +23,11 @@ import GestionConcesionarios from "./Pages/Jefes/GestionConcesionarios.jsx";
 import CrearConcesionario from "./Pages/Jefes/CrearConcesionario.jsx";
 import EditarConcesionario from "./Pages/Jefes/EditarConcesionario.jsx";
 import MiPlan from "./Pages/Jefes/miplan.jsx";
+import Usuarios from "./Pages/Admin/Usuarios.jsx";
+import Preguntas from "./Pages/Admin/Preguntas.jsx";
+import Bloques from "./Pages/Admin/Bloques.jsx";
+import { AdminLayout } from "./Pages/Admin/AdminLayout.jsx";
+
 
 function App() {
   return (
@@ -60,6 +65,11 @@ function App() {
             path="mi-plan"
             element={<MiPlan />}
           />
+        </Route>
+        <Route path="/admin" element={<AdminLayout />}>
+          <Route path="usuarios" element={<Usuarios />} />
+          <Route path="preguntas" element={<Preguntas />} />
+          <Route path="bloques" element={<Bloques />} />
         </Route>
       </Routes>
     </BrowserRouter>
